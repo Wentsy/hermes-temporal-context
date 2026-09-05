@@ -1,6 +1,6 @@
 {
   "name": "hermes-temporal-context",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Passive local-time awareness for companion AI agents without making them announce the time.",
   "type": "module",
   "main": "dist/index.js",
