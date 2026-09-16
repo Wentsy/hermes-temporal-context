@@ -101,7 +101,7 @@ jobs:
           if ((Get-Item $newAsar).Length -lt 1000000) { throw 'Repacked app.asar looks incomplete.' }
           Copy-Item $newAsar $env:MOTRIX_ASAR -Force
 
-          $verify = asar list $env:MOTRIX_ASAR
+          $verify = (asar list $env:MOTRIX_ASAR) -join "`n"
           if ($verify -notmatch 'motrix-nvda-accessibility\.js') { throw 'Patched script is missing from repacked app.asar.' }
           Write-Host 'ASAR verification passed.'
 
